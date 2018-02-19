@@ -1,0 +1,9 @@
+<h2>Artists</h2>
+
+<table>
+  <% for artist in @artists %>
+  <tr>
+    <td><a href="/artists/<%= artist.id %>"><%= artist.name %></a></td>
+  </tr>
+  <% end %>
+</table>

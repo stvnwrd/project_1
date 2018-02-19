@@ -1,0 +1,13 @@
+<h2>Full Album Inventory for the shop</h2>
+
+<ul>
+  <% @albums.each do |album| %>
+  <li>================</li>
+  <li><a href="/albums/<%= album.id %>"><%= album.title %></a><li>
+  <li>Artist: <%= album.artist_id %></li>
+  <li>Stock Level: <%= album.stock_level %></li>
+  <li></li>
+  <li>================</li>
+
+  <% end %>
+</ul>
