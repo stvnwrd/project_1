@@ -38,10 +38,16 @@ end
 
 # create
 
-post "/albums" do
+post "/albums/:id" do
   @album = Album.new(params)
   @album.save()
   erb(:"/albums/create")
+end
+
+post "/albums/:id/update" do
+  @album = Album.new(params)
+  @album.update()
+  redirect to ("/albums")
 end
 
 # destroy
