@@ -1,1 +1,16 @@
-<h2>individual album edit page</h2>
+<article class="main">
+
+  <h2>Title: <%= @album.title %></h2>
+  <h3>Artist: <%= @album.artist.name %> </h3>
+  <h3>Quantity: <%= @album.stock_level%></h3>
+
+
+  <form action="/albums/<%= @album.id %>/edit" method="get">
+    <input type="submit" value="Edit Album">
+  </form>
+
+  <form action="/albums/<%= @album.id %>/delete" method="post">
+    <input type="submit" value="Remove Album">
+  </form>
+
+</article>

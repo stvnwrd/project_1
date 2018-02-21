@@ -7,8 +7,10 @@ require_relative('../models/album.rb')
 
 get '/albums' do
   @albums = Album.find_all()
+  @artists = Artist.find_all()
   erb (:"albums/index")
 end
+
 
 #new
 
@@ -26,10 +28,25 @@ get '/albums/:id' do
   erb (:"albums/show")
 end
 
+#edit
+
+get '/albums/:id/edit' do
+  @album = Album.find(params['id'].to_i)
+  @artists = Artist.find_all()
+  erb (:"/albums/edit")
+end
+
 # create
 
 post "/albums" do
   @album = Album.new(params)
   @album.save()
   erb(:"/albums/create")
+end
+
+# destroy
+
+post "/albums/:id/delete" do
+  Album.delete(params[:id])
+  redirect to ("/albums")
 end

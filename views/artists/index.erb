@@ -1,9 +1,18 @@
-<h2>Artists</h2>
+<article class="main">
+  <h2>Artists</h2>
 
-<table>
-  <% for artist in @artists %>
-  <tr>
-    <td><a href="/artists/<%= artist.id %>"><%= artist.name %></a></td>
-  </tr>
-  <% end %>
-</table>
+  <table>
+    <% for artist in @artists %>
+    <tr>
+      <td><a href="/artists/<%= artist.id %>"><%= artist.name %></a></td>
+    </tr>
+    <% end %>
+  </table>
+
+  <br>
+  <br>
+  <br>
+
+  <!-- Temporary fix until CSS full positioned -->
+
+</article>

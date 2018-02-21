@@ -1,0 +1,119 @@
+body {
+  box-sizing: border-box;
+  margin: 0 auto;
+  background: lightgrey;
+  color: white;
+  font-family: arial;
+  color: black;
+}
+
+header {
+  /* position: fixed; */
+}
+
+h1 {
+  margin: 0 auto;
+  background-color: black;
+  padding-top: 20px;
+  padding-left: 20px;
+  color: rgb(245,245,245);
+
+}
+
+h5 {
+  margin: 0 auto;
+  background-color: black;
+  padding-top: 5px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  color: rgb(245,245,245);
+
+  /* display: inline; */
+  /* float: right; */
+}
+
+nav {
+  background-color: rgb(57,79,79);
+  display: block;
+  width: 100%;
+}
+
+nav li {
+  display: inline-block;
+  padding: 10px 20px;
+}
+
+.nav_right {
+  float: right;
+}
+
+nav ul {
+  display: block;
+  margin: 0 auto;
+  padding: 0 0;
+  width: 100%;
+}
+
+nav a {
+  /* height: 60px; */
+  line-height: 50px;
+  color: lightgrey;
+  text-decoration: none;
+}
+
+a:hover {
+color: white;
+}
+
+table {
+  width: 75%;
+}
+
+th {
+  text-align: left;
+}
+
+
+#turntable {
+  width: 20%;
+  padding: 20px;
+}
+
+.main {
+  padding: 20px;
+
+}
+
+
+.main * {
+  text-decoration: none;
+  color: black;
+  list-style-type: none;
+  padding: 0;
+}
+
+#base {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: lightgrey;
+    text-align: left;
+    padding-left: 20px;
+}
+
+/*
+#li_for_cassette {
+  width: 5%;
+  padding-top: 10px;
+
+}
+
+#cassette_image {
+  /* width: 20%; */
+  /* padding-top: 20px; */
+  /* margin-top: 20px; */
+  /* padding-left: 10px; */
+  /* padding-right: 20px; */
+/* }  */

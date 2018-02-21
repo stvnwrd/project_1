@@ -18,6 +18,42 @@ artist2 = Artist.new({
 
 artist2.save()
 
+artist3 = Artist.new({
+  "name" => "Dinosaur Jr.",
+  })
+
+artist3.save()
+
+artist4 = Artist.new({
+  "name" => "Scooter",
+  })
+
+artist4.save()
+
+artist5 = Artist.new({
+  "name" => "The Monks",
+  })
+
+artist5.save()
+
+artist6 = Artist.new({
+  "name" => "Carla dal Forno",
+  })
+
+artist6.save()
+
+artist7 = Artist.new({
+  "name" => "Swans",
+  })
+
+artist7.save()
+
+artist8 = Artist.new({
+  "name" => "Francis Bebey",
+  })
+
+artist8.save()
+
 album1 = Album.new({
   "title" => "Lixiviation",
   "artist_id" => artist1.id,
@@ -41,6 +77,48 @@ album3 = Album.new({
   })
 
 album3.save()
+
+album4 = Album.new({
+  "title" => "You're Living All Over Me",
+  "artist_id" => artist3.id,
+  "stock_level" => 1
+  })
+
+album4.save()
+
+album5 = Album.new({
+  "title" => "Jumping All Over The World",
+  "artist_id" => artist4.id,
+  "stock_level" => 1
+  })
+
+album5.save()
+
+album6 = Album.new({
+  "title" => "Black Monk Time",
+  "artist_id" => artist5.id,
+  "stock_level" => 0
+  })
+
+album6.save()
+
+album7 = Album.new({
+  "title" => "You Know What It's Like",
+  "artist_id" => artist6.id,
+  "stock_level" => 10
+  })
+
+album7.save()
+
+album8 = Album.new({
+  "title" => "Psychedelic Sanza",
+  "artist_id" => artist6.id,
+  "stock_level" => 10
+  })
+
+album8.save()
+
+
 
 binding.pry
 nil

@@ -1,13 +1,46 @@
-<h2>Full Album Inventory for the shop</h2>
+<article class="main">
+  <h2>All Albums</h2>
 
-<ul>
-  <% @albums.each do |album| %>
-  <li>================</li>
-  <li><a href="/albums/<%= album.id %>"><%= album.title %></a><li>
-  <li>Artist: <%= album.artist_id %></li>
-  <li>Stock Level: <%= album.stock_level %></li>
-  <li></li>
-  <li>================</li>
+  <!-- <ul>
+    <% @albums.each do |album| %>
+    <li>================</li>
+    <li><a href="/albums/<%= album.id %>"><%= album.title %></a><li>
+    <li>Artist: <%= album.artist.name %></li>
 
-  <% end %>
-</ul>
+    <li>Stock Level: <%= album.crude_stock_status %></li>
+    <li></li>
+    <li>================</li>
+
+    <% end %>
+  </ul> -->
+
+
+  <table>
+    <tr>
+      <thead>
+        <th>Album</th>
+        <th>Artist</th>
+        <th>Stock Status</th>
+      </thead>
+      <tbody>
+        </tr>
+        <% @albums.each do |album| %>
+        <tr>
+          <td><a href="/albums/<%= album.id %>"><%= album.title %></a>  </td>
+          <td><%= album.artist.name %></td>
+          <td><%= album.crude_stock_status %></td>
+        </tr>
+        <% end %>
+
+      </tbody>
+
+
+  </table>
+
+  <br>
+  <br>
+  <br>
+
+<!-- br is a fix until css positioning implemented  -->
+
+</article>

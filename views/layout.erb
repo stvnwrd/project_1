@@ -4,34 +4,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/styles/styles.css">
   <title>Rcrd Stock Management</title>
 </head>
 <body>
 
-<h1>RCRD Stock Management</h1>
+<header>
+  <h1>RCRDS</h1>
+  <h5>Record & CD Retail Database System</h5>
+
 
 <nav>
   <ul>
-    <li>
-      <a href="/">Home</a>
-    </li>
-    <li>
-      <a href="/artists">Artists</a>
-    </li>
-    <li>
-      <a href="/artists/new">New Artist</a>
-    </li>
-    <li>
-      <a href="/albums">Albums</a>
-    </li>
-    <li>
-      <a href="/albums/new">New Album</a>
-    </li>
+      <li>
+        <a href="/">Home</a>
+      </li>
+      <li>
+        <a href="/artists">Artists</a>
+      </li>
+      <li>
+        <a href="/artists/new">New Artist</a>
+      </li>
+      <li>
+        <a href="/albums">All Albums</a>
+      </li>
+      <li>
+        <a href="/albums/new">New Album</a>
+      </li>
+
 
   </ul>
 </nav>
+</header>
+
+<img id="turntable" src="/images/simpleturntable.svg" alt="turntable">
+
 
   <%= yield %>
+
+<footer id="base">
+    <h6>&copy; 2018 Pshaw!</h6>
+</footer>
 
 </body>
 </html>

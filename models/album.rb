@@ -1,4 +1,5 @@
 require_relative('../db/sql_runner')
+require_relative('./artist.rb')
 
 class Album
 
@@ -23,6 +24,14 @@ class Album
     sql = "UPDATE albums SET (title, artist_id, stock_level) = ($1, $2, $3) WHERE id = $4"
     values = [@title, @artist_id, @stock_level, @id]
     SqlRunner.run( sql, values )
+  end
+
+
+  def crude_stock_status()
+    return "In Stock" if @stock_level >= 5
+    return "Low Stock - Re-Order Now" if @stock_level >= 2
+    return "Only 1 left!!!" if @stock_level == 1
+    return "Out of Stock" if @stock_level <= 0
   end
 
   def self.delete(id)
@@ -50,4 +59,10 @@ class Album
     SqlRunner.run(sql)
   end
 
+  def artist()
+    sql = "SELECT * FROM artists WHERE id = $1"
+    values = [@artist_id]
+    results = SqlRunner.run(sql, values)
+    return Artist.new(results.first)
+  end
 end
