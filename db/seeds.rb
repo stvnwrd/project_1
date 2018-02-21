@@ -112,7 +112,7 @@ album7.save()
 
 album8 = Album.new({
   "title" => "Psychedelic Sanza",
-  "artist_id" => artist6.id,
+  "artist_id" => artist8.id,
   "stock_level" => 10
   })
 

@@ -3,10 +3,10 @@
 
   <form action="/albums/ <%= @album.id %>" method="post">
 
-    <label for="title">Title: </label>
+    <label for="title"></label>
     <input type="text" name="title" id="title" value="<%= @album.title %>" />
 
-    <label for="artist">Artist: </label>
+    <label for="artist"></label>
     <select name="artist_id" id="artist_id">
       <% for artist in @artists %>
         <option value="<%= artist.id %>"
@@ -16,11 +16,15 @@
       <% end %>
     </select>
 
-    <label for="stock_level">Stock Level: </label>
+    <label for="stock_level"></label>
     <input type="number" name="stock_level" value="<%= @album.stock_level %>">
 
-    <input type="submit" value="Edit That Album">
+    <input class="btn" type="submit" value="Edit Album">
 
   </form>
+
+  <br>
+  <br>
+  <br>
 
 </article>

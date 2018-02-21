@@ -1,8 +1,8 @@
 <article class="main">
 
-  <h2>Title: <%= @album.title %></h2>
-  <h3>Artist: <%= @album.artist.name %> </h3>
-  <h3>Quantity: <%= @album.stock_level%></h3>
+  <h2><%= @album.title %></h2>
+  <h3><%= @album.artist.name %> </h3>
+  <h4><%= @album.stock_level%> in stock.</h4>
 
 
   <form action="/albums/<%= @album.id %>/edit" method="get">
@@ -12,5 +12,9 @@
   <form action="/albums/<%= @album.id %>/delete" method="post">
     <input type="submit" value="Remove Album">
   </form>
+
+  <br>
+  <br>
+  <br>
 
 </article>

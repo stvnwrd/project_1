@@ -7,6 +7,13 @@ body {
   color: black;
 }
 
+@font-face {
+  font-family: 'Pirata One';
+  src: url(/fonts/Pirata_One/PirataOne-Regular.ttf)
+}
+
+
+
 header {
   /* position: fixed; */
 }
@@ -17,6 +24,8 @@ h1 {
   padding-top: 20px;
   padding-left: 20px;
   color: rgb(245,245,245);
+  font-family: 'Pirata One';
+  font-size: 70px;
 
 }
 
@@ -77,6 +86,7 @@ th {
 #turntable {
   width: 20%;
   padding: 20px;
+  margin-top: 20px;
 }
 
 .main {
@@ -102,6 +112,40 @@ th {
     text-align: left;
     padding-left: 20px;
 }
+
+/* .btn {
+  color: black;
+  border: 2px solid darkslategrey;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  padding: 4px;
+  margin-left: 20px;
+}
+
+.btn:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+input[type=text] {
+  color: black;
+  border: 2px solid darkslategrey;
+  padding: 4px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+input[type=number] {
+  color: black;
+  border: 2px solid darkslategrey;
+  padding: 4px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+select {
+  color: black;
+  border: 2px solid darkslategrey;
+  padding: 4px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+} */
+
 
 /*
 #li_for_cassette {
