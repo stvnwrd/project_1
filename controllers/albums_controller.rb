@@ -20,6 +20,13 @@ get "/albums/new" do
   erb ( :"/albums/new")
 end
 
+# create
+
+post "/albums" do
+  @album = Album.new(params)
+  @album.save()
+  erb(:"/albums/create")
+end
 
 # show
 
@@ -28,7 +35,7 @@ get '/albums/:id' do
   erb (:"albums/show")
 end
 
-#edit
+# edit
 
 get '/albums/:id/edit' do
   @album = Album.find(params['id'].to_i)
@@ -36,13 +43,7 @@ get '/albums/:id/edit' do
   erb (:"/albums/edit")
 end
 
-# create
-
-post "/albums/:id" do
-  @album = Album.new(params)
-  @album.save()
-  erb(:"/albums/create")
-end
+# update
 
 post "/albums/:id/update" do
   @album = Album.new(params)
