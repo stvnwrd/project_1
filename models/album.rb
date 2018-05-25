@@ -34,6 +34,14 @@ class Album
     return "Out of Stock" if @stock_level <= 0
   end
 
+  # crude_stock_status method
+  # if the stock level is greater than or equal to 5 return "In Stock"
+  # if the stock level is between 2 and 5 return "Low Stock"
+  # if the stock level is equal to 1 return "Only 1 left"
+  # if the stock level is zero return "Out of Stock"
+
+
+
   def self.delete(id)
     sql = "DELETE FROM albums WHERE id = $1"
     values = [id]
